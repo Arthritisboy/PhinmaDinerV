@@ -7,4 +7,8 @@
     <string name="login">Login</string>
     <string name="full_name">Full Name</string>
     <string name="email">Email</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="already_have_an_account_login">Already have an account? <u>Login</u></string>
+    <string name="create_a_new_account_sign_up">Create a new account? <u>Sign Up</u></string>
+    <string name="welcome">Welcome</string>
 </resources>
