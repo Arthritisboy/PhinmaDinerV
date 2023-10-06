@@ -11,4 +11,11 @@
     <string name="already_have_an_account_login">Already have an account? <u>Login</u></string>
     <string name="create_a_new_account_sign_up">Create a new account? <u>Sign Up</u></string>
     <string name="welcome">Welcome</string>
+    <string name="deals">Deals</string>
+    <string name="bento">Bento</string>
+    <string name="home">Home</string>
+    <string name="stubs">Stubs</string>
+    <string name="profile">Profile</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
