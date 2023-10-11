@@ -4,8 +4,14 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
+
 import android.os.Bundle;
 
+import com.example.phinmadinerv2.fragments.BentoFragment;
+import com.example.phinmadinerv2.fragments.DealsFragment;
+import com.example.phinmadinerv2.fragments.HomeFragment;
+import com.example.phinmadinerv2.fragments.ProfileFragment;
+import com.example.phinmadinerv2.fragments.StubsFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 
@@ -17,6 +23,7 @@ public class LandingPage extends AppCompatActivity {
         protected void onCreate (Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_landing_page);
+
         bottomNavigationView = findViewById(R.id.bottomNavigationView);
 
         replaceFragment(new HomeFragment());
