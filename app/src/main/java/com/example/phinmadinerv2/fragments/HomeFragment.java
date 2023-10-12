@@ -16,13 +16,12 @@ import com.example.phinmadinerv2.adapters.HomeFragmentAdapter;
 import com.example.phinmadinerv2.models.HomeFragmentModel;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class HomeFragment extends Fragment {
 
 
     HomeFragmentAdapter homeFragmentAdapter;
-    List<HomeFragmentModel> homeFragmentModelList;
+    ArrayList<HomeFragmentModel> homeFragmentModelList;
 
     RecyclerView recyclerViewHome;
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,

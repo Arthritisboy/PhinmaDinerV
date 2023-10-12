@@ -4,7 +4,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
-
 import android.os.Bundle;
 
 import com.example.phinmadinerv2.fragments.BentoFragment;
@@ -27,6 +26,7 @@ public class LandingPage extends AppCompatActivity {
         bottomNavigationView = findViewById(R.id.bottomNavigationView);
 
         replaceFragment(new HomeFragment());
+        bottomNavigationView.setSelectedItemId(R.id.home_bottom_nav);
 
         bottomNavigationView.setOnItemSelectedListener(item -> {
             int itemId = item.getItemId();

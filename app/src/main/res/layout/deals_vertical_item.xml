@@ -14,11 +14,12 @@
         android:background="@null">
 
         <com.google.android.material.imageview.ShapeableImageView
-            android:id="@+id/menu_image"
+            android:id="@+id/deals_image"
             android:layout_width="160dp"
             android:layout_height="160dp"
+            android:background="@color/PhinmaMenuItemBackground"
             android:scaleType="fitCenter"
-            android:src="@drawable/ulam_1"
+            android:src="@drawable/groupulam_1"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"

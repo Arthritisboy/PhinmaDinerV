@@ -9,16 +9,17 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.phinmadinerv2.R;
-import com.example.phinmadinerv2.models.HomeFragmentModel;
+import com.example.phinmadinerv2.models.DealsFragmentModel;
 import com.google.android.material.imageview.ShapeableImageView;
 
-import java.util.ArrayList;
+import java.util.List;
 
-public class HomeFragmentAdapter extends RecyclerView.Adapter<HomeFragmentAdapter.ViewHolder> {
+
+public class DealsFragmentAdapter extends RecyclerView.Adapter<DealsFragmentAdapter.ViewHolder> {
     Context context;
-    ArrayList<HomeFragmentModel> list;
+    List<DealsFragmentModel> list;
 
-    public HomeFragmentAdapter(Context context, ArrayList<HomeFragmentModel> list) {
+    public DealsFragmentAdapter(Context context, List<DealsFragmentModel> list) {
         this.context = context;
         this.list = list;
     }
@@ -26,12 +27,12 @@ public class HomeFragmentAdapter extends RecyclerView.Adapter<HomeFragmentAdapte
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        return new ViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.home_vertical_item, parent, false));
+        return new ViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.deals_vertical_item, parent, false));
     }
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        holder.shapeableImageView.setImageResource(list.get(position).getHomeImage());
+        holder.shapeableImageView.setImageResource(list.get(position).getDealsImage());
     }
 
     @Override
@@ -44,7 +45,7 @@ public class HomeFragmentAdapter extends RecyclerView.Adapter<HomeFragmentAdapte
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-            shapeableImageView = itemView.findViewById(R.id.menu_image);
+            shapeableImageView = itemView.findViewById(R.id.deals_image);
         }
     }
 }
