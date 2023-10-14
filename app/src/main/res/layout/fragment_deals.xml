@@ -7,50 +7,15 @@
     tools:context=".fragments.DealsFragment"
     android:background="@drawable/bentofragmentbackground">
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btn_group_meals"
-        android:layout_width="125dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="100dp"
-        android:background="@drawable/btn_groupmeals_state"
-        android:gravity="center"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btn_solo"
-        android:layout_width="125dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="100dp"
-        android:background="@drawable/btn_solo_state"
-        android:gravity="center"
-        app:layout_constraintStart_toEndOf="@+id/btn_group_meals"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btn_merienda"
-        android:layout_width="125dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginTop="100dp"
-        android:background="@drawable/btn_merienda_state"
-        android:gravity="center"
-        app:layout_constraintStart_toEndOf="@+id/btn_solo"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="540dp"
         android:background="@null"
-        android:layout_marginTop="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_solo"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup"
         app:layout_constraintVertical_bias="0.045">
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -71,5 +36,42 @@
                 app:layout_constraintStart_toStartOf="parent" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.core.widget.NestedScrollView>
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="92dp"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatRadioButton
+            android:id="@+id/btn_group_meals"
+            android:layout_width="125dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="16dp"
+            android:background="@drawable/btn_groupmeals_state"
+            android:button="@null"
+            android:checked="true"/>
+
+        <androidx.appcompat.widget.AppCompatRadioButton
+            android:id="@+id/btn_solo"
+            android:layout_width="125dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="6dp"
+            android:layout_marginEnd="6dp"
+            android:background="@drawable/btn_solo_state"
+            android:button="@null" />
+
+        <androidx.appcompat.widget.AppCompatRadioButton
+            android:id="@+id/btn_merienda"
+            android:layout_width="125dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/btn_merienda_state"
+            android:button="@null" />
+
+    </RadioGroup>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
