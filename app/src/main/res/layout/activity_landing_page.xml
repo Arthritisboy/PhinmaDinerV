@@ -10,7 +10,7 @@
     <FrameLayout
         android:id="@+id/frame_layout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="match_parent" />
 
     <com.google.android.material.bottomappbar.BottomAppBar
         android:layout_width="match_parent"
@@ -28,6 +28,9 @@
             android:background="@color/PhinmaDinerGreen"
             app:labelVisibilityMode="labeled"
             app:menu="@menu/bottom_nav_menu"
+            app:itemActiveIndicatorStyle="@null"
+            app:itemIconTint="@drawable/bottom_nav_icon_state"
+            app:itemTextColor="@drawable/bottom_nav_icon_state"
             app:itemIconSize="40dp" />
 
     </com.google.android.material.bottomappbar.BottomAppBar>

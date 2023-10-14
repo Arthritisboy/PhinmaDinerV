@@ -76,6 +76,8 @@ public class DealsFragment extends Fragment {
                 callback(dealsFragmentModels);
             }
         });
+
+
         btn_solo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -95,6 +97,7 @@ public class DealsFragment extends Fragment {
             }
         });
 
+
         btn_merienda.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -113,6 +116,7 @@ public class DealsFragment extends Fragment {
                 callback(dealsFragmentModels);
             }
         });
+
         return root;
     }
 

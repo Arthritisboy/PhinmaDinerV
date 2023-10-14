@@ -2,25 +2,29 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     >
 
-    <item android:title="@string/deals"
+    <item
+        android:title="@string/deals"
         android:id="@+id/deals_bottom_nav"
         android:icon="@drawable/deals_normal" />
 
-    <item android:title="@string/bento"
-        android:id="@+id/bento_bottom_nav"
-        android:icon="@drawable/bento_normal" />
+    <item
+        android:title="@string/foods"
+        android:id="@+id/foods_bottom_nav"
+        android:icon="@drawable/foods_bottom_nav_normal" />
 
-    <item android:title=""
+    <item
+        android:title=""
         android:id="@+id/home_bottom_nav"
         android:icon="@drawable/home_clicked_normal"
         android:enabled="true" />
 
-    <item android:title="@string/stubs"
+    <item
+        android:title="@string/stubs"
         android:id="@+id/stubs_bottom_nav"
-        android:icon="@drawable/stubs_normal"
-        />
+        android:icon="@drawable/stubs_normal" />
 
-    <item android:title="@string/profile"
+    <item
+        android:title="@string/profile"
         android:id="@+id/profile_bottom_nav"
         android:icon="@drawable/profile_normal" />
 </menu>

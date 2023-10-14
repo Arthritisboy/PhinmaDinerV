@@ -6,7 +6,7 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 import android.os.Bundle;
 
-import com.example.phinmadinerv2.fragments.BentoFragment;
+import com.example.phinmadinerv2.fragments.FoodsFragment;
 import com.example.phinmadinerv2.fragments.DealsFragment;
 import com.example.phinmadinerv2.fragments.HomeFragment;
 import com.example.phinmadinerv2.fragments.ProfileFragment;
@@ -38,8 +38,8 @@ public class LandingPage extends AppCompatActivity {
                 replaceFragment(new ProfileFragment());
             } else if (itemId == R.id.stubs_bottom_nav) {
                 replaceFragment(new StubsFragment());
-            } else if (itemId == R.id.bento_bottom_nav) {
-                replaceFragment(new BentoFragment());
+            } else if (itemId == R.id.foods_bottom_nav) {
+                replaceFragment(new FoodsFragment());
             }
                 return true;
         });

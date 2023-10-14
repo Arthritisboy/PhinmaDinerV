@@ -3,19 +3,16 @@
 
     <item android:title="@string/deals"
         android:id="@+id/deals_bottom_nav"
-        android:icon="@drawable/deals_normal"
-        android:iconTint="@color/PhinmaDinerYellow"/>
+        android:icon="@drawable/deals_normal" />
 
-    <item android:title="@string/bento"
-        android:id="@+id/bento_bottom_nav"
-        android:icon="@drawable/bento_normal"
-        android:iconTint="@color/PhinmaDinerYellow"/>
+    <item android:title="@string/foods"
+        android:id="@+id/foods_bottom_nav"
+        android:icon="@drawable/foods_bottom_nav_normal" />
 
     <item android:title=""
         android:id="@+id/home_bottom_nav"
         android:icon="@drawable/home_clicked_normal"
-        android:enabled="true"
-        android:iconTint="@color/PhinmaDinerYellow"/>
+        android:enabled="true" />
 
     <item android:title="@string/stubs"
         android:id="@+id/stubs_bottom_nav"
