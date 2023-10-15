@@ -6,4 +6,5 @@
     <color name="white">#FFFFFFFF</color>
     <color name="PhinmaMenuItemBackground">#e7f0db</color>
     <color name="bottom_nav_default_icon_color">#264a0a</color>
+    <color name="DarkGreen">#25490A</color>
 </resources>
