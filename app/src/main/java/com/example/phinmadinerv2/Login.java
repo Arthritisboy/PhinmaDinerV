@@ -11,6 +11,7 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.phinmadinerv2.SharedPreferences.SharedPreferencesClass;
 import com.google.android.material.textfield.TextInputEditText;
 import com.vishnusivadas.advanced_httpurlconnection.PutData;
 
@@ -29,6 +30,7 @@ public class Login extends AppCompatActivity {
         textInputEditTextPassword = findViewById(R.id.password);
         loginButton = findViewById(R.id.loginButton);
         textViewSignup = findViewById(R.id.signUpHere);
+        SharedPreferencesClass sharedPreferenceClass = new SharedPreferencesClass(this);
 
         textViewSignup.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -72,6 +74,9 @@ public class Login extends AppCompatActivity {
                                 if (putData.onComplete()) {
                                     String result = putData.getResult();
                                     if(result.equals("Login Success")) {
+
+                                        //Shared Preference
+                                        sharedPreferenceClass.saveLoginStatus(true);
                                         Toast.makeText(getApplicationContext(), result, Toast.LENGTH_SHORT).show();
                                         Intent intent = new Intent(getApplicationContext(), LandingPage.class);
                                         startActivity(intent);

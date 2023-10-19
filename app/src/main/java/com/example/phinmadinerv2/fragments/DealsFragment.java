@@ -43,16 +43,16 @@ public class DealsFragment extends Fragment {
         btn_merienda = root.findViewById(R.id.btn_merienda);
         if (check) {
             ArrayList<DealsFragmentModel> dealsFragmentModels = new ArrayList<>();
-            dealsFragmentModels.add(new DealsFragmentModel(R.drawable.groupulam_1));
-            dealsFragmentModels.add(new DealsFragmentModel(R.drawable.groupulam_1));
-            dealsFragmentModels.add(new DealsFragmentModel(R.drawable.groupulam_1));
-            dealsFragmentModels.add(new DealsFragmentModel(R.drawable.groupulam_1));
-            dealsFragmentModels.add(new DealsFragmentModel(R.drawable.groupulam_1));
-            dealsFragmentModels.add(new DealsFragmentModel(R.drawable.groupulam_1));
-            dealsFragmentModels.add(new DealsFragmentModel(R.drawable.groupulam_1));
-            dealsFragmentModels.add(new DealsFragmentModel(R.drawable.groupulam_1));
-            dealsFragmentModels.add(new DealsFragmentModel(R.drawable.groupulam_1));
-            dealsFragmentModels.add(new DealsFragmentModel(R.drawable.groupulam_1));
+            dealsFragmentModels.add(new DealsFragmentModel(R.drawable.deals_group_meals_beef_steak, "Beef Steak w/ 4 Rice & 1L Coke", 41, "41"));
+            dealsFragmentModels.add(new DealsFragmentModel(R.drawable.deals_group_meals_burger_steak, "Burger Steak w/ 4 Rice & 1L Coke", 39, "39"));
+            dealsFragmentModels.add(new DealsFragmentModel(R.drawable.deals_group_meals_buttered_garlic_shrimp, "Buttered Shrimp w/ 4 Rice & 1L Coke", 42, "42"));
+            dealsFragmentModels.add(new DealsFragmentModel(R.drawable.deals_group_meals_chicken_curry, "Chicken Curry w/ 4 Rice & 1L Coke", 38, "38"));
+            dealsFragmentModels.add(new DealsFragmentModel(R.drawable.deals_group_meals_fried_chicken, "Fried Chicken w/ 4 Rice & 1L Coke", 38, "38"));
+            dealsFragmentModels.add(new DealsFragmentModel(R.drawable.deals_group_meals_grilled_chicken, "Grilled Chicken w/ 4 Rice & 1L Coke", 39, "39"));
+            dealsFragmentModels.add(new DealsFragmentModel(R.drawable.deals_group_meals_kare_kare, "Kare-Kare w/ 4 Rice & 1L Coke", 40, "40"));
+            dealsFragmentModels.add(new DealsFragmentModel(R.drawable.deals_group_meals_piniyahang_manok, "Pininyahang Manok w/ 4 Rice & 1L Coke", 38, "38"));
+            dealsFragmentModels.add(new DealsFragmentModel(R.drawable.deals_group_meals_pork_adobo, "Pork Adobo w/ 4 Rice & 1L Coke", 40, "40"));
+            dealsFragmentModels.add(new DealsFragmentModel(R.drawable.deals_group_meals_tortang_talong, "Tortang Talong w/ 4 Rice & 1L Coke", 34, "34"));
 
             callback(dealsFragmentModels);
             check = false;
@@ -62,16 +62,16 @@ public class DealsFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 ArrayList<DealsFragmentModel> dealsFragmentModels = new ArrayList<>();
-                dealsFragmentModels.add(new DealsFragmentModel(R.drawable.groupulam_1));
-                dealsFragmentModels.add(new DealsFragmentModel(R.drawable.groupulam_1));
-                dealsFragmentModels.add(new DealsFragmentModel(R.drawable.groupulam_1));
-                dealsFragmentModels.add(new DealsFragmentModel(R.drawable.groupulam_1));
-                dealsFragmentModels.add(new DealsFragmentModel(R.drawable.groupulam_1));
-                dealsFragmentModels.add(new DealsFragmentModel(R.drawable.groupulam_1));
-                dealsFragmentModels.add(new DealsFragmentModel(R.drawable.groupulam_1));
-                dealsFragmentModels.add(new DealsFragmentModel(R.drawable.groupulam_1));
-                dealsFragmentModels.add(new DealsFragmentModel(R.drawable.groupulam_1));
-                dealsFragmentModels.add(new DealsFragmentModel(R.drawable.groupulam_1));
+                dealsFragmentModels.add(new DealsFragmentModel(R.drawable.deals_group_meals_beef_steak, "Beef Steak w/ 4 Rice & 1L Coke", 41, "41"));
+                dealsFragmentModels.add(new DealsFragmentModel(R.drawable.deals_group_meals_burger_steak, "Burger Steak w/ 4 Rice & 1L Coke", 39, "39"));
+                dealsFragmentModels.add(new DealsFragmentModel(R.drawable.deals_group_meals_buttered_garlic_shrimp, "Buttered Shrimp w/ 4 Rice & 1L Coke", 42, "42"));
+                dealsFragmentModels.add(new DealsFragmentModel(R.drawable.deals_group_meals_chicken_curry, "Chicken Curry w/ 4 Rice & 1L Coke", 38, "38"));
+                dealsFragmentModels.add(new DealsFragmentModel(R.drawable.deals_group_meals_fried_chicken, "Fried Chicken w/ 4 Rice & 1L Coke", 38, "38"));
+                dealsFragmentModels.add(new DealsFragmentModel(R.drawable.deals_group_meals_grilled_chicken, "Grilled Chicken w/ 4 Rice & 1L Coke", 39, "39"));
+                dealsFragmentModels.add(new DealsFragmentModel(R.drawable.deals_group_meals_kare_kare, "Kare-Kare w/ 4 Rice & 1L Coke", 40, "40"));
+                dealsFragmentModels.add(new DealsFragmentModel(R.drawable.deals_group_meals_piniyahang_manok, "Pininyahang Manok w/ 4 Rice & 1L Coke", 38, "38"));
+                dealsFragmentModels.add(new DealsFragmentModel(R.drawable.deals_group_meals_pork_adobo, "Pork Adobo w/ 4 Rice & 1L Coke", 40, "40"));
+                dealsFragmentModels.add(new DealsFragmentModel(R.drawable.deals_group_meals_tortang_talong, "Tortang Talong w/ 4 Rice & 1L Coke", 34, "34"));
 
                 callback(dealsFragmentModels);
             }
@@ -82,16 +82,16 @@ public class DealsFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 ArrayList<DealsFragmentModel> dealsFragmentModels = new ArrayList<>();
-                dealsFragmentModels.add(new DealsFragmentModel(R.drawable.ulam_1));
-                dealsFragmentModels.add(new DealsFragmentModel(R.drawable.ulam_1));
-                dealsFragmentModels.add(new DealsFragmentModel(R.drawable.ulam_1));
-                dealsFragmentModels.add(new DealsFragmentModel(R.drawable.ulam_1));
-                dealsFragmentModels.add(new DealsFragmentModel(R.drawable.ulam_1));
-                dealsFragmentModels.add(new DealsFragmentModel(R.drawable.ulam_1));
-                dealsFragmentModels.add(new DealsFragmentModel(R.drawable.ulam_1));
-                dealsFragmentModels.add(new DealsFragmentModel(R.drawable.ulam_1));
-                dealsFragmentModels.add(new DealsFragmentModel(R.drawable.ulam_1));
-                dealsFragmentModels.add(new DealsFragmentModel(R.drawable.ulam_1));
+                dealsFragmentModels.add(new DealsFragmentModel(R.drawable.deals_solo_adobo, "Adobo w/ Rice and Coke", 15, "15"));
+                dealsFragmentModels.add(new DealsFragmentModel(R.drawable.deals_solo_adobong_pusit, "Adobong Pusit w/ Rice and Sprite", 15, "15"));
+                dealsFragmentModels.add(new DealsFragmentModel(R.drawable.deals_solo_bangus, "Bangus w/ Rice and Coke", 13, "13"));
+                dealsFragmentModels.add(new DealsFragmentModel(R.drawable.deals_solo_binagoongan, "Binagoongan w/ Rice and Coke", 15, "15"));
+                dealsFragmentModels.add(new DealsFragmentModel(R.drawable.deals_solo_buffalo_wings, "Buffalo Wings w/ Rice and Royal", 14, "14"));
+                dealsFragmentModels.add(new DealsFragmentModel(R.drawable.deals_solo_chicken_afritada, "Chicken Afritada w/ Rice and Sprite", 15, "15"));
+                dealsFragmentModels.add(new DealsFragmentModel(R.drawable.deals_solo_dinakdakan, "Dinakdakan w/ Rice and Coke", 15, "15"));
+                dealsFragmentModels.add(new DealsFragmentModel(R.drawable.deals_solo_dinuguan, "Dinuguan w/ Rice and Sprite", 14, "14"));
+                dealsFragmentModels.add(new DealsFragmentModel(R.drawable.deals_group_meals_fried_chicken, "Fried Chicken w/ Rice and Coke", 13, "13"));
+                dealsFragmentModels.add(new DealsFragmentModel(R.drawable.deals_solo_ginataang_gulay, "Ginataang Gulay w/ Rice and Coke", 12, "12"));
 
                 callback(dealsFragmentModels);
             }
@@ -102,16 +102,17 @@ public class DealsFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 ArrayList<DealsFragmentModel> dealsFragmentModels = new ArrayList<>();
-                dealsFragmentModels.add(new DealsFragmentModel(R.drawable.meriendadeal_1));
-                dealsFragmentModels.add(new DealsFragmentModel(R.drawable.meriendadeal_1));
-                dealsFragmentModels.add(new DealsFragmentModel(R.drawable.meriendadeal_1));
-                dealsFragmentModels.add(new DealsFragmentModel(R.drawable.meriendadeal_1));
-                dealsFragmentModels.add(new DealsFragmentModel(R.drawable.meriendadeal_1));
-                dealsFragmentModels.add(new DealsFragmentModel(R.drawable.meriendadeal_1));
-                dealsFragmentModels.add(new DealsFragmentModel(R.drawable.meriendadeal_1));
-                dealsFragmentModels.add(new DealsFragmentModel(R.drawable.meriendadeal_1));
-                dealsFragmentModels.add(new DealsFragmentModel(R.drawable.meriendadeal_1));
-                dealsFragmentModels.add(new DealsFragmentModel(R.drawable.meriendadeal_1));
+                dealsFragmentModels.add(new DealsFragmentModel(R.drawable.deals_merienda_plain_burger, "Burger and Coke", 11, "11"));
+                dealsFragmentModels.add(new DealsFragmentModel(R.drawable.deals_merienda_carbonara, "Carbonara and Sprite", 11, "11"));
+                dealsFragmentModels.add(new DealsFragmentModel(R.drawable.deals_merienda_cheese_burger, "Cheese Burger and Coke", 12, "12"));
+                dealsFragmentModels.add(new DealsFragmentModel(R.drawable.deals_merienda_egg_sandwich, "Egg Sandwich", 11, "11"));
+                dealsFragmentModels.add(new DealsFragmentModel(R.drawable.deals_merienda_french_fries, "French Fries and Mountain Dew", 11, "11"));
+                dealsFragmentModels.add(new DealsFragmentModel(R.drawable.deals_merienda_ginataang_mais, "Ginataang Mais and Absolute", 11, "11"));
+                dealsFragmentModels.add(new DealsFragmentModel(R.drawable.deals_merienda_ilocos_empanada, "Ilocos Empanada and Coke", 11, "11"));
+                dealsFragmentModels.add(new DealsFragmentModel(R.drawable.deals_merienda_pancit_canton, "Pancit Canton and Coke", 11, "11"));
+                dealsFragmentModels.add(new DealsFragmentModel(R.drawable.deals_merienda_spaghetti, "Spaghetti and Coke", 11, "11"));
+                dealsFragmentModels.add(new DealsFragmentModel(R.drawable.deals_merienda_special_palabok, "Special Palabok and Royal", 11, "11"));
+                dealsFragmentModels.add(new DealsFragmentModel(R.drawable.deals_merienda_super_sopas, "Super Sopas and Absolute", 11, "11"));
 
                 callback(dealsFragmentModels);
             }

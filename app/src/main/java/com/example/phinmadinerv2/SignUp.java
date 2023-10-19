@@ -3,6 +3,7 @@ package com.example.phinmadinerv2;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
@@ -11,6 +12,7 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.phinmadinerv2.SharedPreferences.SharedPreferencesClass;
 import com.google.android.material.textfield.TextInputEditText;
 import com.vishnusivadas.advanced_httpurlconnection.FetchData;
 import com.vishnusivadas.advanced_httpurlconnection.PutData;
@@ -21,6 +23,8 @@ public class SignUp extends AppCompatActivity {
             textInputEditTextPassword;
     Button buttonSignUp;
     TextView textViewLogin;
+    SharedPreferencesClass sharedPreferenceClass;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +37,8 @@ public class SignUp extends AppCompatActivity {
         textInputEditTextPassword = findViewById(R.id.password);
         buttonSignUp = findViewById(R.id.signUpButton);
         textViewLogin = findViewById(R.id.loginHere);
+
+        sharedPreferenceClass = new SharedPreferencesClass(this);
 
         textViewLogin.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -78,6 +84,9 @@ public class SignUp extends AppCompatActivity {
                                 if (putData.onComplete()) {
                                     String result = putData.getResult();
                                     if(result.equals("Sign up Successful")) {
+                                        //Shared Preference
+                                        sharedPreferenceClass.saveLoginStatus(true);
+
                                         Toast.makeText(getApplicationContext(), result, Toast.LENGTH_SHORT).show();
                                         Intent intent = new Intent(getApplicationContext(), Login.class);
                                         startActivity(intent);

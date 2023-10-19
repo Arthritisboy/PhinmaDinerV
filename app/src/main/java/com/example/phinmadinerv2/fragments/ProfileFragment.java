@@ -1,8 +1,9 @@
 package com.example.phinmadinerv2.fragments;
 
 import android.app.AlertDialog;
-import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -17,12 +18,18 @@ import com.example.phinmadinerv2.ProfileFragmentActivity.AboutUsActivity;
 import com.example.phinmadinerv2.ProfileFragmentActivity.FeedbackActivity;
 import com.example.phinmadinerv2.ProfileFragmentActivity.PrivacyActivity;
 import com.example.phinmadinerv2.R;
-
+import com.example.phinmadinerv2.SharedPreferences.SharedPreferencesClass;
 
 
 public class ProfileFragment extends Fragment {
 
-    Button privacyButton, feedbackButton, aboutUsButton, logOutButton;
+    Button privacyButton, feedbackButton, aboutUsButton, logOutButton,
+            exitButtonLogout, cancelButtonLogout;
+
+    SharedPreferencesClass sharedPreferenceClass;
+
+
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -33,6 +40,15 @@ public class ProfileFragment extends Fragment {
         feedbackButton = root.findViewById(R.id.feedback);
         aboutUsButton = root.findViewById(R.id.about_us);
         logOutButton = root.findViewById(R.id.log_out);
+        AlertDialog.Builder logoutDialog = new AlertDialog.Builder(getContext());
+        View logoutLayout = LayoutInflater.from(getContext()).inflate(R.layout.logout_dialog_layout, null);
+        logoutDialog.setView(logoutLayout);
+        logoutDialog.setCancelable(false);
+        final AlertDialog dialog = logoutDialog.create();
+        exitButtonLogout = (Button) logoutLayout.findViewById(R.id.btn_logout_exit);
+        cancelButtonLogout = (Button) logoutLayout.findViewById(R.id.btn_logout_cancel);
+        sharedPreferenceClass = new SharedPreferencesClass(getContext());
+
 
         privacyButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -64,28 +80,25 @@ public class ProfileFragment extends Fragment {
         logOutButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                AlertDialog.Builder alertDialog1 = new AlertDialog.Builder(getActivity());
+                dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+                dialog.show();
+            }
+        });
 
-                alertDialog1.setTitle("Logout");
-                alertDialog1.setMessage("Are you sure you want to logout? ");
-                alertDialog1.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        Intent intent = new Intent(getActivity(), Login.class);
-                        startActivity(intent);
+        exitButtonLogout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                dialog.dismiss();
+                Intent intent = new Intent(getActivity(), Login.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                startActivity(intent);
+            }
+        });
 
-                    }
-
-                });
-                alertDialog1.setNegativeButton("No", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        dialog.dismiss();
-                    }
-                });
-
-                alertDialog1.show();
-
+        cancelButtonLogout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                dialog.dismiss();
             }
         });
 

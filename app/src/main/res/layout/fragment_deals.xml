@@ -43,6 +43,7 @@
         android:layout_height="50dp"
         android:layout_marginTop="92dp"
         android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -50,10 +51,10 @@
             android:id="@+id/btn_group_meals"
             android:layout_width="125dp"
             android:layout_height="50dp"
-            android:layout_marginStart="16dp"
+            android:layout_marginStart="10dp"
             android:background="@drawable/btn_groupmeals_state"
             android:button="@null"
-            android:checked="true"/>
+            android:checked="true" />
 
         <androidx.appcompat.widget.AppCompatRadioButton
             android:id="@+id/btn_solo"
@@ -68,7 +69,7 @@
             android:id="@+id/btn_merienda"
             android:layout_width="125dp"
             android:layout_height="50dp"
-            android:layout_marginEnd="16dp"
+            android:layout_marginEnd="10dp"
             android:background="@drawable/btn_merienda_state"
             android:button="@null" />
 

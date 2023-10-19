@@ -6,6 +6,7 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 import android.os.Bundle;
 
+import com.example.phinmadinerv2.SharedPreferences.SharedPreferencesClass;
 import com.example.phinmadinerv2.fragments.FoodsFragment;
 import com.example.phinmadinerv2.fragments.DealsFragment;
 import com.example.phinmadinerv2.fragments.HomeFragment;
