@@ -29,4 +29,9 @@
     <string name="privacy_policy">Privacy Policy</string>
     <string name="log_out">Log Out</string>
     <string name="about_us">About Us</string>
+    <string name="food_stub_5pts">Food Stub 5pts</string>
+    <string name="food_stub_10pts">Food Stub 10pts</string>
+    <string name="food_stub_30pts">Food Stub 30pts</string>
+    <string name="food_stub_20pts">Food Stub 20pts</string>
+    <string name="food_stub_40pts">Food stub 40pts</string>
 </resources>
