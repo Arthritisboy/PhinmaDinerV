@@ -9,14 +9,14 @@
 
     <TextView
         android:id="@+id/points"
-        android:layout_width="135dp"
-        android:layout_height="26dp"
-        android:layout_marginTop="28dp"
+        android:layout_width="120dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="16dp"
         android:textAlignment="center"
         android:textColor="@color/PhinmaDinerYellow"
-        android:textSize="29sp"
+        android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.974"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

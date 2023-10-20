@@ -1,8 +1,11 @@
 package com.example.phinmadinerv2.fragments;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.os.Bundle;
 
 
+import androidx.activity.result.ActivityResultLauncher;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
@@ -12,6 +15,10 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.example.phinmadinerv2.R;
+import com.journeyapps.barcodescanner.ScanContract;
+import com.journeyapps.barcodescanner.ScanOptions;
+
+import CaptureActStubs.CaptureAct;
 
 public class StubsFragment extends Fragment {
 
@@ -33,17 +40,40 @@ public class StubsFragment extends Fragment {
 
         resultPts = root.findViewById(R.id.points);
 
-        scan_btn_5.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-
-
-            }
+        scan_btn_5.setOnClickListener(v ->
+        {
+            scanCode();
         });
 
 
         return root;
     }
+
+    private void scanCode() {
+
+        ScanOptions options = new ScanOptions();
+        options.setPrompt("Volume up to flash on");
+        options.setBeepEnabled(true);
+        options.setOrientationLocked(true);
+        options.setCaptureActivity(CaptureAct.class);
+        barLaunch.launch(options);
+    }
+
+    ActivityResultLauncher<ScanOptions> barLaunch = registerForActivityResult(new ScanContract(), result ->
+    {
+        resultPts.setText(result.getContents());
+        if(result.getContents() != null)
+        {
+            AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+            builder.setTitle("Result");
+            builder.setMessage(result.getContents());
+            builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    dialog.dismiss();
+                }
+            }).show();
+        }
+    });
 
 }
