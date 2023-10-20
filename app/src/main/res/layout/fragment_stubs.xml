@@ -1,14 +1,84 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/food_stub_background"
     tools:context=".fragments.StubsFragment">
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/stubs" />
+        android:id="@+id/points"
+        android:layout_width="135dp"
+        android:layout_height="26dp"
+        android:layout_marginTop="28dp"
+        android:textAlignment="center"
+        android:textColor="@color/PhinmaDinerYellow"
+        android:textSize="29sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.974"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-</FrameLayout>
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/food_stub_5"
+        android:layout_width="309dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="548dp"
+        android:background="@color/DarkGreen"
+        android:text="@string/food_stub_5pts"
+        android:textColor="@color/PhinmaDinerYellow"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/food_stub_10"
+        android:layout_width="309dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/DarkGreen"
+        android:text="@string/food_stub_10pts"
+        android:textColor="@color/PhinmaDinerYellow"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/food_stub_5" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/food_stub_20"
+        android:layout_width="309dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="24dp"
+        android:background="@color/DarkGreen"
+        android:text="@string/food_stub_20pts"
+        android:textColor="@color/PhinmaDinerYellow"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/food_stub_10" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/food_stub_30"
+        android:layout_width="309dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/DarkGreen"
+        android:text="@string/food_stub_30pts"
+        android:textColor="@color/PhinmaDinerYellow"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/food_stub_20" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@id/food_stub_40"
+        android:layout_width="309dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/DarkGreen"
+        android:text="@string/food_stub_40pts"
+        android:textColor="@color/PhinmaDinerYellow"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/food_stub_30" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

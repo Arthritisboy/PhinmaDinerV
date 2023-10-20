@@ -32,4 +32,10 @@
     <string name="order_name">Order name:</string>
     <string name="stub_price">Stub price:</string>
     <string name="customer">Customer:</string>
+    <string name="food_stub_5pts">Food Stub 5pts</string>
+    <string name="food_stub_10pts">Food Stub 10pts</string>
+    <string name="food_stub_30pts">Food Stub 30pts</string>
+    <string name="food_stub_20pts">Food Stub 20pts</string>
+    <string name="food_stub_40pts">Food stub 40pts</string>
+
 </resources>
