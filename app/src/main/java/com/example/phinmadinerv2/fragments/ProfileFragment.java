@@ -1,7 +1,9 @@
 package com.example.phinmadinerv2.fragments;
 
 import android.app.AlertDialog;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
@@ -12,21 +14,22 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.TextView;
 
 import com.example.phinmadinerv2.Login;
 import com.example.phinmadinerv2.ProfileFragmentActivity.AboutUsActivity;
 import com.example.phinmadinerv2.ProfileFragmentActivity.FeedbackActivity;
 import com.example.phinmadinerv2.ProfileFragmentActivity.PrivacyActivity;
 import com.example.phinmadinerv2.R;
-import com.example.phinmadinerv2.SharedPreferences.SharedPreferencesClass;
-
 
 public class ProfileFragment extends Fragment {
 
     Button privacyButton, feedbackButton, aboutUsButton, logOutButton,
             exitButtonLogout, cancelButtonLogout;
 
-    SharedPreferencesClass sharedPreferenceClass;
+    TextView profile_user, profile_email;
+
+
 
 
 
@@ -40,6 +43,9 @@ public class ProfileFragment extends Fragment {
         feedbackButton = root.findViewById(R.id.feedback);
         aboutUsButton = root.findViewById(R.id.about_us);
         logOutButton = root.findViewById(R.id.log_out);
+        profile_email = root.findViewById(R.id.profile_email);
+        profile_user = root.findViewById(R.id.profile_user);
+
         AlertDialog.Builder logoutDialog = new AlertDialog.Builder(getContext());
         View logoutLayout = LayoutInflater.from(getContext()).inflate(R.layout.logout_dialog_layout, null);
         logoutDialog.setView(logoutLayout);
@@ -47,7 +53,11 @@ public class ProfileFragment extends Fragment {
         final AlertDialog dialog = logoutDialog.create();
         exitButtonLogout = (Button) logoutLayout.findViewById(R.id.btn_logout_exit);
         cancelButtonLogout = (Button) logoutLayout.findViewById(R.id.btn_logout_cancel);
-        sharedPreferenceClass = new SharedPreferencesClass(getContext());
+        SharedPreferences sp = getActivity().getSharedPreferences("Login", Context.MODE_PRIVATE);
+        String username = sp.getString("Username", "");
+        String email = sp.getString("Email", "");
+        profile_user.setText(username);
+        profile_email.setText(email);
 
 
         privacyButton.setOnClickListener(new View.OnClickListener() {

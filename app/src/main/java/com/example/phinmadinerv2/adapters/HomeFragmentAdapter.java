@@ -9,10 +9,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
-
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
-
 import com.example.phinmadinerv2.R;
 import com.example.phinmadinerv2.models.HomeFragmentModel;
 import com.google.android.material.imageview.ShapeableImageView;
@@ -25,8 +23,7 @@ public class HomeFragmentAdapter extends RecyclerView.Adapter<HomeFragmentAdapte
 
     Button btn_order_cancel, btn_order_buy;
 
-    TextView orderName, stubPrice, customer;
-
+    TextView orderName, stubPrice;
 
     public HomeFragmentAdapter(Context context, ArrayList<HomeFragmentModel> list) {
         this.context = context;

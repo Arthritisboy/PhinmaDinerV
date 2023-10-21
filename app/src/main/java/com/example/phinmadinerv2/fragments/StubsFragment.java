@@ -1,24 +1,19 @@
 package com.example.phinmadinerv2.fragments;
 
-import android.app.AlertDialog;
-import android.content.DialogInterface;
+
 import android.os.Bundle;
-
-
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.fragment.app.Fragment;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
-
 import com.example.phinmadinerv2.R;
 import com.journeyapps.barcodescanner.ScanContract;
 import com.journeyapps.barcodescanner.ScanOptions;
 
-import CaptureActStubs.CaptureAct;
+import com.example.phinmadinerv2.CaptureActStubs.CaptureAct;
 
 public class StubsFragment extends Fragment {
 
@@ -64,15 +59,7 @@ public class StubsFragment extends Fragment {
         resultPts.setText(result.getContents());
         if(result.getContents() != null)
         {
-            AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
-            builder.setTitle("Result");
-            builder.setMessage(result.getContents());
-            builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
-                @Override
-                public void onClick(DialogInterface dialog, int which) {
-                    dialog.dismiss();
-                }
-            }).show();
+           // To be fixed
         }
     });
 

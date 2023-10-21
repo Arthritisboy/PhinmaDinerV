@@ -24,16 +24,11 @@
         <activity
             android:name=".LandingPage"
             android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
 
         </activity>
 
-        <activity android:name="CaptureActStubs.CaptureAct"
-            android:screenOrientation="portrait"
+        <activity android:name=".CaptureActStubs.CaptureAct"
+            android:screenOrientation="fullSensor"
             android:stateNotNeeded="true"
             android:theme="@style/zxing_CaptureTheme"/>
 
@@ -41,7 +36,11 @@
             android:name=".Login"
             android:exported="true"
             android:theme="@style/Theme.AppCompat.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity
             android:name=".SignUp"
