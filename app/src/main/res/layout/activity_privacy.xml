@@ -4,6 +4,420 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/privacy_policy"
     tools:context="ProfileFragmentActivity.PrivacyActivity">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="740dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+        
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="@string/effective_date_oct_23_2023"
+                android:textStyle="bold"
+                android:textColor="@color/DarkGreen"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:text="@string/happy_meal_us_we_or_our_operates_the_phinmadiner_mobile_application_the_service_this_page_informs_you_of_our_policies_regarding_the_collection_use_and_disclosure_of_personal_data_when_you_use_our_service_and_the_choices_you_have_associated_with_that_data_we_use_your_data_to_provide_and_improve_the_service_by_using_the_service_you_agree_to_the_collection_and_use_of_information_in_accordance_with_this_policy_unless_otherwise_defined_in_this_privacy_policy_terms_used_in_this_privacy_policy_have_the_same_meanings_as_in_our_terms_and_conditions"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView1">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:textColor="@color/DarkGreen"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:text="@string/information_collection_and_use"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView2">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:text="@string/we_collect_several_different_types_of_information_for_various_purposes_to_provide_and_improve_our_service_to_you"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView3">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:textColor="@color/DarkGreen"
+                android:text="@string/uses_made_of_the_information"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView4">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:text="@string/we_use_information_held_about_you_in_the_following_ways"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView5">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:text="@string/_1_information_you_give_to_us_we_will_use_this_information_to_carry_out_our_obligations_arising_from_any_contracts_entered_into_between_you_and_us_and_to_provide_you_with_the_information_products_and_services_that_you_request_from_us_to_provide_you_with_information_about_other_goods_and_services_we_offer_that_are_similar_to_those_that_you_have_already_purchased_or_enquired_about_to_notify_you_about_changes_to_our_service_to_ensure_that_content_from_the_application_is_presented_in_the_most_effective_manner_for_you_and_for_your_mobile_phone_n2_information_we_collect_about_you_we_will_use_this_information_to_administer_the_application_and_for_internal_operations_including_troubleshooting_data_analysis_testing_research_statistical_and_survey_purposes_to_improve_the_application_to_ensure_that_content_is_presented_in_the_most_effective_manner_for_you_and_for_your_computer_to_allow_you_to_participate_in_interactive_features_of_our_service_when_you_choose_to_do_so_and_as_part_of_our_efforts_to_keep_the_application_safe_and_secure"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView6">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/types_of_data_collected"
+                android:textStyle="bold"
+                android:textColor="@color/DarkGreen"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView7">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/personal_data"
+                android:textStyle="bold"
+                android:textColor="@color/DarkGreen"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView8">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:text="@string/while_using_our_service_we_may_ask_you_to_provide_us_with_certain_personally_identifiable_information_that_can_be_used_to_contact_or_identify_you_personal_data_personally_identifiable_information_may_include_but_is_not_limited_to"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView9">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/textView11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:text="@string/email_address_n_first_name_and_last_name"
+                app:layout_constraintTop_toBottomOf="@id/textView10"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.04"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:layout_editor_absoluteY="663dp">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/textView12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/use_of_data"
+                android:textStyle="bold"
+                android:textColor="@color/DarkGreen"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView11">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/textView13"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:text="@string/phinmadiner_uses_the_collected_data_for_various_purposes_n_to_provide_and_maintain_the_service_n_to_notify_you_about_changes_to_our_service_n_to_allow_you_to_participate_in_interactive_features_of_our_service_when_you_choose_to_do_so_n_to_provide_customer_care_and_support_n_to_provide_analysis_or_valuable_information_so_that_we_can_improve_the_service_n_to_detect_prevent_and_address_technical_issues_n"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textView12">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/textView14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/transfer_of_your_personal_data"
+                android:textStyle="bold"
+                android:textColor="@color/DarkGreen"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textView13">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/textView15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:text="@string/your_information_including_personal_data_is_processed_at_the_company_s_operating_offices_and_in_any_other_places_where_the_parties_involved_in_the_processing_are_located_it_means_that_this_information_may_be_transferred_to_and_maintained_on_computers_located_outside_of_your_state_province_country_or_other_governmental_jurisdiction_where_the_data_protection_laws_may_differ_from_those_from_your_jurisdiction_n_your_consent_to_this_privacy_policy_followed_by_your_submission_of_such_information_represents_your_agreement_to_that_transfer_n_phinmadiner_will_take_all_steps_reasonably_necessary_to_ensure_that_your_data_is_treated_securely_and_in_accordance_with_this_privacy_policy_and_no_transfer_of_your_personal_data_will_take_place_to_an_organization_or_a_country_unless_there_are_adequate_controls_in_place_including_the_security_of_your_data_and_other_personal_information"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textView14"
+                tools:layout_editor_absoluteY="531dp">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/textView16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/DarkGreen"
+                android:text="@string/delete_your_personal_data"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView15">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/textView17"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:text="@string/you_have_the_right_to_delete_or_request_that_we_assist_in_deleting_the_personal_data_that_we_have_collected_about_you_n_our_service_may_give_you_the_ability_to_delete_certain_information_about_you_from_within_the_service_n_you_may_update_amend_or_delete_your_information_at_any_time_by_signing_in_to_your_account_if_you_have_one_and_visiting_the_account_settings_section_that_allows_you_to_manage_your_personal_information_you_may_also_contact_us_to_request_access_to_correct_or_delete_any_personal_information_that_you_have_provided_to_us_n_please_note_however_that_we_may_need_to_retain_certain_information_when_we_have_a_legal_obligation_or_lawful_basis_to_do_so"
+                app:layout_constraintTop_toBottomOf="@id/textView16"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/textView18"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/disclosure_of_data"
+                android:textStyle="bold"
+                android:textColor="@color/DarkGreen"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textView17">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/textView19"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/DarkGreen"
+                android:text="@string/legal_requirements"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textView18">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/textView20"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:text="@string/phinmadiner_may_disclose_your_personal_data_in_the_good_faith_belief_that_such_action_is_necessary_to_n_to_comply_with_a_legal_obligation_n_to_protect_and_defend_the_rights_or_property_of_phinmadiner_n_to_prevent_or_investigate_possible_wrongdoing_in_connection_with_the_service_n_to_protect_the_personal_safety_of_users_of_the_service_or_the_public_n_to_protect_against_legal_liability"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textView19">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/textView21"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/security_of_data"
+                android:textStyle="bold"
+                android:textColor="@color/DarkGreen"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textView20">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/textView22"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:text="@string/the_security_of_your_data_is_important_to_us_but_remember_that_no_method_of_transmission_over_the_internet_or_method_of_electronic_storage_is_100_secure_while_we_strive_to_use_commercially_acceptable_means_to_protect_your_personal_data_we_cannot_guarantee_its_absolute_security"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textView21">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/textView23"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/DarkGreen"
+                android:text="@string/children_s_privacy"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textView22">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/textView24"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:text="@string/our_service_does_not_address_anyone_under_the_age_of_12_children_we_do_not_knowingly_collect_personally_identifiable_information_from_anyone_under_the_age_of_12_if_you_are_a_parent_or_guardian_and_you_are_aware_that_your_children_have_provided_us_with_personal_data_please_contact_us_if_we_become_aware_that_we_have_collected_personal_data_from_children_without_verification_of_parental_consent_we_take_steps_to_remove_that_information_from_our_servers"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textView23">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/textView25"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/DarkGreen"
+                android:text="@string/changes_to_this_privacy_policy"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textView24">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/textView26"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:text="@string/we_may_update_our_privacy_policy_from_time_to_time_we_will_notify_you_of_any_changes_by_posting_the_new_privacy_policy_on_this_page_n_we_will_let_you_know_via_email_and_or_a_prominent_notice_on_our_service_prior_to_the_change_becoming_effective_and_update_the_effective_date_at_the_top_of_this_privacy_policy_n_you_are_advised_to_review_this_privacy_policy_periodically_for_any_changes_changes_to_this_privacy_policy_are_effective_when_they_are_posted_on_this_page"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textView25">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/textView27"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/contact_us"
+                android:textColor="@color/DarkGreen"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textView26">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/textView28"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textAlignment="center"
+                android:text="@string/if_you_have_any_questions_about_this_privacy_policy_please_contact_us_n_by_email_phinmadiner_gmail_com_n"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textView27">
+
+            </TextView>
+
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+    <ImageButton
+        android:id="@+id/aboutUsBack"
+        android:layout_marginTop="2dp"
+        android:layout_width="69dp"
+        android:layout_height="75dp"
+        android:background="@drawable/back_about_us"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.012"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </ImageButton>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
