@@ -2,6 +2,7 @@ package com.example.phinmadinerv2.adapters;
 
 import android.app.AlertDialog;
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.view.LayoutInflater;
@@ -9,15 +10,25 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.android.volley.AuthFailureError;
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
 import com.example.phinmadinerv2.R;
 import com.example.phinmadinerv2.models.FoodsFragmentModel;
 import com.google.android.material.imageview.ShapeableImageView;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class FoodsFragmentAdapter extends RecyclerView.Adapter<FoodsFragmentAdapter.ViewHolder> {
     Context context;
@@ -25,6 +36,10 @@ public class FoodsFragmentAdapter extends RecyclerView.Adapter<FoodsFragmentAdap
 
     TextView orderName, stubPrice;
     Button btn_order_cancel, btn_order_buy;
+
+    public static final String KEY_USERNAME = "username";
+    public static final String KEY_EMAIL = "email";
+    public static final String KEY_POINTS = "points";
 
     public FoodsFragmentAdapter(Context context, List<FoodsFragmentModel> list) {
         this.context = context;
@@ -46,12 +61,14 @@ public class FoodsFragmentAdapter extends RecyclerView.Adapter<FoodsFragmentAdap
         confirmOrder.setCancelable(false);
         final AlertDialog dialog = confirmOrder.create();
 
+        SharedPreferences sp = context.getSharedPreferences("Login", Context.MODE_PRIVATE);
         btn_order_cancel = (Button) confirmOrderLayout.findViewById(R.id.btn_order_cancel);
         btn_order_buy = (Button) confirmOrderLayout.findViewById(R.id.btn_order_buy);
         orderName = (TextView) confirmOrderLayout.findViewById(R.id.order_name_content);
         stubPrice = (TextView) confirmOrderLayout.findViewById(R.id.stub_price_content);
         orderName.setText(list.get(position).getFoodsName());
         stubPrice.setText(list.get(position).getFoodPointsString());
+        float points = sp.getFloat("Points", 0);
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -71,7 +88,18 @@ public class FoodsFragmentAdapter extends RecyclerView.Adapter<FoodsFragmentAdap
         btn_order_buy.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                dialog.dismiss();
+                if(list.get(position).getFoodsPoints() <= points) {
+                    SharedPreferences.Editor editor = sp.edit();
+                    float pointsToSubtract = list.get(position).getFoodsPoints();
+                    float newValueofPoints = points - pointsToSubtract;
+                    editor.putFloat("Points", newValueofPoints);
+                    editor.apply();
+                    dialog.dismiss();
+                    updateDatabasePoints();
+                } else {
+                    Toast.makeText(context, "You don't have enough points", Toast.LENGTH_SHORT).show();
+                }
+
             }
         });
     }
@@ -88,5 +116,36 @@ public class FoodsFragmentAdapter extends RecyclerView.Adapter<FoodsFragmentAdap
             super(itemView);
             shapeableImageView = itemView.findViewById(R.id.foods_image);
         }
+    }
+    private void updateDatabasePoints(){
+        SharedPreferences sp = context.getSharedPreferences("Login", Context.MODE_PRIVATE);
+        String Username = sp.getString("Username", "");
+        String Email = sp.getString("Email", "");
+        float Points = sp.getFloat("Points", 0.0f);
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, "https://phinmadiner.000webhostapp.com/updatepoints.php",
+                new Response.Listener<String>() {
+                    @Override
+                    public void onResponse(String response) {
+
+                    }
+                },
+                new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        Toast.makeText(context, ""+error, Toast.LENGTH_LONG).show();
+                    }
+                }) {
+            @Override
+            protected Map<String, String> getParams() throws AuthFailureError {
+                Map<String, String> map = new HashMap<String, String>();
+                map.put(KEY_USERNAME, Username);
+                map.put(KEY_EMAIL, Email);
+                map.put(KEY_POINTS, String.valueOf(Points));
+                return map;
+            }
+        };
+
+        RequestQueue requestQueue = Volley.newRequestQueue(context);
+        requestQueue.add(stringRequest);
     }
 }

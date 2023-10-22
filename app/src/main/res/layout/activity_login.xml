@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/login_background"
+    android:background="@drawable/loginbackground"
     tools:context=".Login">
 
     <com.google.android.material.textfield.TextInputLayout
@@ -12,21 +12,22 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="56dp"
+        android:hint="@string/usernameCU"
         android:layout_marginLeft="40dp"
         android:layout_marginRight="40dp"
         android:textColorHint="@color/cardview_shadow_start_color"
-        android:hint="@string/usernameCU"
-        app:layout_constraintTop_toBottomOf="@+id/titleLogin"
-        tools:layout_editor_absoluteX="0dp">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titleLogin">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/username"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="12sp"
-            android:textColor="@color/black"
             android:drawableEnd="@drawable/green_user_icon"
-            android:fontFamily="@font/poppinsmedium" />
+            android:fontFamily="@font/poppinsmedium"
+            android:textColor="@color/black"
+            android:textSize="12sp" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -58,15 +59,15 @@
 
     <TextView
         android:id="@+id/titleLogin"
-        android:layout_width="264dp"
-        android:layout_height="68dp"
+        android:layout_width="266dp"
+        android:layout_height="74dp"
         android:layout_marginTop="252dp"
         android:fontFamily="@font/poppinsbold"
         android:gravity="center"
         android:text="@string/login"
         android:textAlignment="center"
         android:textColor="@color/black"
-        android:textSize="40sp"
+        android:textSize="45sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

@@ -1,5 +1,7 @@
 package com.example.phinmadinerv2.fragments;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -12,6 +14,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.TextView;
 
 import com.example.phinmadinerv2.R;
 import com.example.phinmadinerv2.adapters.FoodsFragmentAdapter;
@@ -27,6 +30,8 @@ public class FoodsFragment extends Fragment {
     RadioGroup radioGroup;
 
     RadioButton btn_dishes, btn_foods_merienda, btn_drinks;
+
+    TextView points;
 
     boolean check = true;
 
@@ -44,6 +49,11 @@ public class FoodsFragment extends Fragment {
         btn_dishes = root.findViewById(R.id.btn_dishes);
         btn_drinks = root.findViewById(R.id.btn_drinks);
         btn_foods_merienda = root.findViewById(R.id.btn_merienda_foods);
+
+        points = root.findViewById(R.id.points);
+        SharedPreferences sp = getActivity().getSharedPreferences("Login", Context.MODE_PRIVATE);
+        points.setText(String.valueOf(sp.getFloat("Points",0)));
+
         if (check) {
             ArrayList<FoodsFragmentModel> foodsFragmentModels = new ArrayList<>();
             foodsFragmentModels.add(new FoodsFragmentModel(R.drawable.foods_dishes_beef_steak, "Regular Beef Steak", 12, "12"));

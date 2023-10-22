@@ -28,6 +28,7 @@ public class ProfileFragment extends Fragment {
             exitButtonLogout, cancelButtonLogout;
 
     TextView profile_user, profile_email;
+    boolean loginstatus = false;
 
 
 
@@ -54,6 +55,7 @@ public class ProfileFragment extends Fragment {
         exitButtonLogout = (Button) logoutLayout.findViewById(R.id.btn_logout_exit);
         cancelButtonLogout = (Button) logoutLayout.findViewById(R.id.btn_logout_cancel);
         SharedPreferences sp = getActivity().getSharedPreferences("Login", Context.MODE_PRIVATE);
+        SharedPreferences status = getActivity().getSharedPreferences("status", Context.MODE_PRIVATE);
         String username = sp.getString("Username", "");
         String email = sp.getString("Email", "");
         profile_user.setText(username);
@@ -98,6 +100,10 @@ public class ProfileFragment extends Fragment {
         exitButtonLogout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                SharedPreferences.Editor editor = status.edit();
+                loginstatus = false;
+                editor.putBoolean("LoginStatus", loginstatus);
+                editor.apply();
                 dialog.dismiss();
                 Intent intent = new Intent(getActivity(), Login.class);
                 intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
@@ -108,6 +114,7 @@ public class ProfileFragment extends Fragment {
         cancelButtonLogout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 dialog.dismiss();
             }
         });

@@ -21,7 +21,6 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.phinmadinerv2.Config.Config;
-import com.example.phinmadinerv2.SharedPreferences.SharedPreferencesClass;
 import com.google.android.material.textfield.TextInputEditText;
 import com.vishnusivadas.advanced_httpurlconnection.PutData;
 
@@ -38,7 +37,8 @@ public class Login extends AppCompatActivity {
     TextInputEditText textInputEditTextUsername, textInputEditTextPassword;
     Button loginButton;
     TextView textViewSignup;
-    SharedPreferences sp;
+    SharedPreferences sp, status;
+    boolean loginstatus = false;
 
     public static final String KEY_USERNAME = "username";
     public static final String KEY_PASSWORD = "password";
@@ -53,8 +53,8 @@ public class Login extends AppCompatActivity {
         textInputEditTextPassword = findViewById(R.id.password);
         loginButton = findViewById(R.id.loginButton);
         textViewSignup = findViewById(R.id.signUpHere);
-        SharedPreferencesClass sharedPreferenceClass = new SharedPreferencesClass(this);
         sp = getSharedPreferences("Login", Context.MODE_PRIVATE);
+        status = getSharedPreferences("status", Context.MODE_PRIVATE);
 
 
         textViewSignup.setOnClickListener(new View.OnClickListener() {
@@ -102,13 +102,13 @@ public class Login extends AppCompatActivity {
 
                                         //Shared Preference
                                         GetMatchData();
+                                        loginstatus = true;
 
-                                        sharedPreferenceClass.saveLoginStatus(true);
 
 
-                                        //SharedPreferences.Editor editor = sp.edit();
-                                        //editor.putString("User", username);
-                                        //editor.commit();
+                                        SharedPreferences.Editor editor = status.edit();
+                                        editor.putBoolean("LoginStatus", loginstatus);
+                                        editor.commit();
                                         Toast.makeText(getApplicationContext(), result, Toast.LENGTH_SHORT).show();
                                         Intent intent = new Intent(getApplicationContext(), LandingPage.class);
                                         startActivity(intent);
@@ -179,19 +179,19 @@ public class Login extends AppCompatActivity {
                 JSONObject jo = result.getJSONObject(i);
                 String username = jo.getString(Config.KEY_USERNAME);
                 String email = jo.getString(Config.KEY_EMAIL);
-                String points = jo.getString(Config.KEY_POINTS);
+                int points = jo.getInt(Config.KEY_POINTS);
 
                 final HashMap<String, String> employees = new HashMap<>();
                 employees.put(Config.KEY_EMAIL, email);
                 employees.put(Config.KEY_USERNAME, username);
-                employees.put(Config.KEY_POINTS, points);
+                employees.put(Config.KEY_POINTS, String.valueOf(points));
 
                 list.add(employees);
                 sp = getSharedPreferences("Login", Context.MODE_PRIVATE);
                 SharedPreferences.Editor editor = sp.edit();
 
                 editor.putString("Username", username);
-                editor.putString("Points", points);
+                editor.putFloat("Points", points);
                 editor.putString("Email", email);
                 editor.commit();
             }

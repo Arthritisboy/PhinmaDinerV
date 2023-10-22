@@ -1,5 +1,7 @@
 package com.example.phinmadinerv2.fragments;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -11,6 +13,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.TextView;
+
 import com.example.phinmadinerv2.R;
 import com.example.phinmadinerv2.adapters.DealsFragmentAdapter;
 import com.example.phinmadinerv2.models.DealsFragmentModel;
@@ -24,6 +28,8 @@ public class DealsFragment extends Fragment {
     RadioGroup radioGroup;
 
     RadioButton btn_group_meals, btn_merienda, btn_solo;
+
+    TextView points;
 
     boolean check = true;
 
@@ -41,6 +47,11 @@ public class DealsFragment extends Fragment {
         btn_group_meals = root.findViewById(R.id.btn_group_meals);
         btn_solo = root.findViewById(R.id.btn_solo);
         btn_merienda = root.findViewById(R.id.btn_merienda);
+        points = root.findViewById(R.id.points);
+        SharedPreferences sp = getActivity().getSharedPreferences("Login", Context.MODE_PRIVATE);
+
+        points.setText(String.valueOf(sp.getFloat("Points",0)));
+
         if (check) {
             ArrayList<DealsFragmentModel> dealsFragmentModels = new ArrayList<>();
             dealsFragmentModels.add(new DealsFragmentModel(R.drawable.deals_group_meals_beef_steak, "Beef Steak w/ 4 Rice & 1L Coke", 41, "41"));
