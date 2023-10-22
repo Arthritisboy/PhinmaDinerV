@@ -26,7 +26,6 @@
         android:layout_width="276dp"
         android:layout_height="513dp"
         android:background="@drawable/btn_scanner_state"
-        android:text="@string/food_stub_5pts"
         android:textColor="@color/PhinmaDinerYellow"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

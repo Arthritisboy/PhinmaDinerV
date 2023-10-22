@@ -18,7 +18,6 @@ import android.widget.TextView;
 
 import com.example.phinmadinerv2.Login;
 import com.example.phinmadinerv2.ProfileFragmentActivity.AboutUsActivity;
-import com.example.phinmadinerv2.ProfileFragmentActivity.FeedbackActivity;
 import com.example.phinmadinerv2.ProfileFragmentActivity.PrivacyActivity;
 import com.example.phinmadinerv2.R;
 import com.example.phinmadinerv2.SharedPreferences.SharedPreferencesClass;
@@ -87,8 +86,8 @@ public class ProfileFragment extends Fragment {
             @Override
             public void onClick(View v) {
 
-                Intent intent = new Intent(getActivity(), FeedbackActivity.class);
-                startActivity(intent);
+                dialog1.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+                dialog1.show();
 
             }
         });

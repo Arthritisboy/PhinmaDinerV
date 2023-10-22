@@ -49,6 +49,18 @@
         <activity
             android:name=".MainActivity"
             android:exported="true"/>
+        <activity
+            android:name=".ProfileFragmentActivity.AboutUsActivity"
+            android:exported="true">
+
+        </activity>
+
+        <activity
+            android:name=".ProfileFragmentActivity.PrivacyActivity"
+            android:exported="true">
+
+        </activity>
+
     </application>
 
 </manifest>
