@@ -21,17 +21,17 @@ import com.example.phinmadinerv2.ProfileFragmentActivity.AboutUsActivity;
 import com.example.phinmadinerv2.ProfileFragmentActivity.FeedbackActivity;
 import com.example.phinmadinerv2.ProfileFragmentActivity.PrivacyActivity;
 import com.example.phinmadinerv2.R;
+import com.example.phinmadinerv2.SharedPreferences.SharedPreferencesClass;
+
 
 public class ProfileFragment extends Fragment {
 
     Button privacyButton, feedbackButton, aboutUsButton, logOutButton,
-            exitButtonLogout, cancelButtonLogout;
-
+            exitButtonLogout, cancelButtonLogout, submitButtonFeedback,
+            cancelButtonFeedback, thanksCancelButton;
     TextView profile_user, profile_email;
+    SharedPreferencesClass sharedPreferenceClass;
     boolean loginstatus = false;
-
-
-
 
 
     @Override
@@ -46,21 +46,33 @@ public class ProfileFragment extends Fragment {
         logOutButton = root.findViewById(R.id.log_out);
         profile_email = root.findViewById(R.id.profile_email);
         profile_user = root.findViewById(R.id.profile_user);
-
         AlertDialog.Builder logoutDialog = new AlertDialog.Builder(getContext());
         View logoutLayout = LayoutInflater.from(getContext()).inflate(R.layout.logout_dialog_layout, null);
         logoutDialog.setView(logoutLayout);
         logoutDialog.setCancelable(false);
         final AlertDialog dialog = logoutDialog.create();
+        AlertDialog.Builder feedbackDialog = new AlertDialog.Builder(getContext());
+        View feedbackLayout = LayoutInflater.from(getContext()).inflate(R.layout.feedback_layout, null);
+        feedbackDialog.setView(feedbackLayout);
+        feedbackDialog.setCancelable(false);
+        final AlertDialog dialog1 = feedbackDialog.create();
+        AlertDialog.Builder thankDialog = new AlertDialog.Builder(getContext());
+        View thankLayout = LayoutInflater.from(getContext()).inflate(R.layout.thank_you_layout, null);
+        thankDialog.setView(thankLayout);
+        thankDialog.setCancelable(false);
+        final AlertDialog dialog2 = thankDialog.create();
         exitButtonLogout = (Button) logoutLayout.findViewById(R.id.btn_logout_exit);
         cancelButtonLogout = (Button) logoutLayout.findViewById(R.id.btn_logout_cancel);
+        submitButtonFeedback = (Button) feedbackLayout.findViewById(R.id.submitFeedback);
+        cancelButtonFeedback = (Button) feedbackLayout.findViewById(R.id.cancelFeedback);
+        thanksCancelButton = (Button) thankLayout.findViewById(R.id.cancel_btn_feedback);
+        sharedPreferenceClass = new SharedPreferencesClass(getContext());
         SharedPreferences sp = getActivity().getSharedPreferences("Login", Context.MODE_PRIVATE);
         SharedPreferences status = getActivity().getSharedPreferences("status", Context.MODE_PRIVATE);
         String username = sp.getString("Username", "");
         String email = sp.getString("Email", "");
         profile_user.setText(username);
         profile_email.setText(email);
-
 
         privacyButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -114,14 +126,43 @@ public class ProfileFragment extends Fragment {
         cancelButtonLogout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
                 dialog.dismiss();
+            }
+        });
+        feedbackButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog1.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+                dialog1.show();
+            }
+        });
+
+        cancelButtonFeedback.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog1.dismiss();
+            }
+        });
+
+        submitButtonFeedback.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog2.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+                dialog2.show();
+
+            }
+        });
+
+        thanksCancelButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog1.dismiss();
+                dialog2.dismiss();
             }
         });
 
         return root;
 
     }
-
 
 }

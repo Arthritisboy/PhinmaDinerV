@@ -4,6 +4,223 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/about_us_background"
     tools:context="ProfileFragmentActivity.AboutUsActivity">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="740dp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+
+            <TextView
+                android:id="@+id/aboutText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/it_happens_several_times_each_week_a_phinma_student_order_food_through_our_app_by_exchanging_money_for_stub_points_but_each_interaction_is_unquestionably_unique"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+            </TextView>
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="290dp"
+                android:layout_height="170dp"
+                android:layout_marginTop="8dp"
+                android:src="@drawable/about_phinma"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.495"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/aboutText">
+
+            </ImageView>
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="399dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/it_s_just_a_moment_in_time_just_one_hand_reaching_over_the_counter_to_present_a_qr_code_for_another_hand_to_scan_but_it_s_a_connection"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.032"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView2">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="350dp"
+                android:layout_height="20dp"
+                android:text="@string/brief_information_about_phinma_diner"
+                android:textAlignment="center"
+                android:textColor="@color/DarkGreen"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.4"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView4">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="350dp"
+                android:layout_height="20dp"
+                android:text="@string/_2023"
+                android:textColor="@color/DarkGreen"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.016"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView5">
+
+            </TextView>
+
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="399dp"
+                android:layout_height="55dp"
+                android:text="@string/phinma_diner_application_s_first_launch_at_phinma_university_of_pangasinan_on_late_october_its_developer_is_composed_of_5_it_students"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView7">
+
+            </TextView>
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="290dp"
+                android:layout_height="170dp"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/about_school"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.495"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView8">
+
+            </ImageView>
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="390dp"
+                android:layout_height="20dp"
+                android:text="@string/our_mission"
+                android:textColor="@color/DarkGreen"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView3">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="390dp"
+                android:layout_height="35dp"
+                android:text="@string/to_serve_the_upang_community_by_giving_them_excellent_service_and_high_quality_food_that_suits_their_tastes"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView9">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/textView11"
+                android:layout_width="390dp"
+                android:layout_height="20dp"
+                android:text="@string/vision"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView10">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="400dp"
+                android:layout_height="20dp"
+                android:text="@string/sasamahan_ka_maging_sa_pagpili_ng_best_options_for_meals"
+                android:textAlignment="center"
+                android:textColor="@color/DarkGreen"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView11">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/textView12"
+                android:layout_width="400dp"
+                android:layout_height="150dp"
+                android:text="@string/our_primary_concern_is_for_our_phinma_students_and_staff_to_meet_the_ever_changing_demands_of_their_stomachs_n_n_we_are_at_the_very_beginning_of_the_development_of_the_food_ordering_system_at_phinma_university_n_n_to_inspire_and_nurture_the_human_spirit_one_person_one_meal_and_one_university_at_a_time"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView3">
+
+            </TextView>
+
+            <ImageView
+                android:layout_width="290dp"
+                android:layout_height="170dp"
+                android:layout_marginBottom="4dp"
+                android:src="@drawable/about_ulam"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView12">
+
+            </ImageView>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+    <ImageButton
+        android:id="@+id/aboutUsBack"
+        android:layout_marginTop="2dp"
+        android:layout_width="69dp"
+        android:layout_height="75dp"
+        android:background="@drawable/back_about_us"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.012"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </ImageButton>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
